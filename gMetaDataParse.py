@@ -434,7 +434,7 @@ def printDoc():
     print("Cache file name: file name of cache file taken from items table")
     print("Found in cache dir: 1-> a corresponding file is found in the content cache folder. Mapping is done base on filename taken from database and searched in content cache.")
     print("trashed: 1-> file deleted")
-    print("is_owner: 1-> User from which metadata_sqlite_db is taken is the owner of this file")
+    print("is_owner: 1-> User from which metadata_sqlite_db is taken is the owner of this file. If the user is not the owner, the file is likley to be shared by someone else then.")
     print("is_folder: 1-> Folder; 0-> File")
     print("MIME type: MIME type of the file")
     print("item_props Mod Date: Modification time of the file reported from the local filesystem")
