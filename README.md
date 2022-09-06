@@ -12,7 +12,7 @@ Option | Explanation
 -j \<FILE\>, --json \<FILE\> | Filename for JSON output. Example: res.json
 -c \<FILE\>, --csv \<FILE\> | Filename for CSV output. Example: res.csv
 -v, --verbose | Increase output verbosity 
--g, --gui | Start GUI shown reconstruced directory tree with selected informaiton. Use this option in combination with at least the -f option. To start the GUI and select the database and the content_cahce folder from the GUI simply run without providing a parameter. 
+-g, --gui | Start GUI shown reconstruced directory tree with selected information. You need to use the -f option in combination with -g. To start just the GUI run without commands 
 
 
 ## GUI

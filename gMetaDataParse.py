@@ -451,7 +451,7 @@ parser.add_argument("-d","--directory", type=lambda p: Path(p).absolute(), help=
 parser.add_argument("-o","--output", type=lambda p: Path(p).absolute(), help="Path (relative or absolute) to directory were the output shoudl be written to. Example: C:\Data")
 parser.add_argument("-j","--json",help="Filename for JSON output. Example: res.json")
 parser.add_argument("-c","--csv",help="Filename for CSV output. Example: res.csv")
-parser.add_argument("-g","--gui",help="Start GUI shown reconstruced directory tree with selected informaiton. You need to use the -f option in combination with -g. To start just the GUI run without commands",action="store_true")
+parser.add_argument("-g","--gui",help="Start GUI shown reconstruced directory tree with selected information. You need to use the -f option in combination with -g. To start just the GUI run without commands",action="store_true")
 
 args = parser.parse_args()
 
