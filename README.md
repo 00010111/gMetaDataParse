@@ -18,7 +18,7 @@ Option | Explanation
 ## GUI
 Entries were a matching file found in the content_cache are marked in green color.
 If an entry is marked as trashed, it is marked in red.
-The node "NO_PARENT_ITME_IN_ITEMS_TABEL" is a node added by pMetaDataParse. It is used to sort the items where no parent could be found for in the itmes table. It is NOT an entry present in the metadata_sqlite_db file.!
+The node "NO_PARENT_ITME_IN_ITEMS_TABEL" is a node added by pMetaDataParse. It is used to sort the items where no parent could be found in the itmes table. It is NOT an entry present in the metadata_sqlite_db file.!
 
 
 ## Requirements
