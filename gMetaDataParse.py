@@ -451,8 +451,7 @@ parser.add_argument("-d","--directory", type=lambda p: Path(p).absolute(), help=
 parser.add_argument("-o","--output", type=lambda p: Path(p).absolute(), help="Path (relative or absolute) to directory were the output shoudl be written to. Example: C:\Data")
 parser.add_argument("-j","--json",help="Filename for JSON output. Example: res.json")
 parser.add_argument("-c","--csv",help="Filename for CSV output. Example: res.csv")
-parser.add_argument("-g","--gui",help="Start GUI shown reconstruced directory tree with selected informaiton. If you want to use this function tkinter needs to be installed. ",action="store_true")
-
+parser.add_argument("-g","--gui",help="Start GUI shown reconstruced directory tree with selected informaiton. You need to use the -f option in combination with -g. To start just the GUI run without commands",action="store_true")
 
 args = parser.parse_args()
 
@@ -470,6 +469,9 @@ if not any(vars(args).values()):
     #no args given
     #print("no args given")
     lunchgui(None,None)
+elif args.gui and not db_path:
+    print("If you use the -g,--gui option you need to provide the path to the metadata_sqlite_db file with the -f option. To start the GUI without choosing a file, run without any commandline option")
+    exit(1)
 else:
     res = parseDB(metadata_file,cache_dir)
     if args.output == None:
