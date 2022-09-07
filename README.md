@@ -19,11 +19,11 @@ Option | Explanation
 Entries were a matching file found in the content_cache are marked in green color.
 If an entry is marked as trashed, it is marked in red.
 The node "NO_PARENT_ITME_IN_ITEMS_TABEL" is a node added by pMetaDataParse. It is used to sort the items where no parent could be found in the itmes table. It is NOT an entry present in the metadata_sqlite_db file.!
-
+Further I created an executable with auto-py-to-exe, this executable will open the GUI and you can select "content_cache" and "metadat_sqlite_db" via the menue. Click afterwards click reload.
 
 ## Requirements
 See requirements.txt. 
-To install on linux run: apt install -y python3-pip; apt install python3-tk; pip3 install -r requirements.txt 
+To install on linux run (tested on fresh Ubuntu 22 install): apt install -y python3-pip; apt install -y python3-tk; pip3 install -r requirements.txt 
 To install on windows: install pip3; open PowerShell and run pip3 install -r requirements.txt
 
 ## Examples
