@@ -1,6 +1,6 @@
 # gMetaDataParse
 ## Extracts information from metadata_sqlite_db and the corresponding content_cache folder. Both artifacts of Google Drive for Desktop
-Parsing the database and matching a file in the content_cache folder if provided and a file is still in cache
+Parsing the database and matching a file to the filename in the content_cache folder, if provided and the file is still in cache.
 Offers json and csv export as well as a GUI.
 
 ## Usage
@@ -19,12 +19,13 @@ Option | Explanation
 Entries were a matching file found in the content_cache are marked in green color.
 If an entry is marked as trashed, it is marked in red.
 The node "NO_PARENT_ITME_IN_ITEMS_TABEL" is a node added by pMetaDataParse. It is used to sort the items where no parent could be found in the itmes table. It is NOT an entry present in the metadata_sqlite_db file.!
-Further I created an executable with auto-py-to-exe, this executable will open the GUI and you can select "content_cache" and "metadat_sqlite_db" via the menue. Click afterwards click reload.
+
+I further created an executable with auto-py-to-exe, this executable will open the GUI and you can select "content_cache" and "metadat_sqlite_db" via the menue. Click afterwards click reload.
 
 ## Requirements
-See requirements.txt. 
-To install on linux run (tested on fresh Ubuntu 22 install): apt install -y python3-pip; apt install -y python3-tk; pip3 install -r requirements.txt 
-To install on windows: install pip3; open PowerShell and run pip3 install -r requirements.txt
+* See requirements.txt. 
+* To install on linux run (tested on fresh Ubuntu 22 install): apt install -y python3-pip; apt install -y python3-tk; pip3 install -r requirements.txt 
+*To install on windows: install pip3; open PowerShell and run pip3 install -r requirements.txt
 
 ## Examples
 ```
@@ -42,9 +43,9 @@ python3 ./gMetaDataParse.py
 ```
 
 ## Limitations
-If you review the code you will see a few things:
-a) I'm not a GUI person and neither a person that likes to develop a GUI application. You will easily see this in the code; I still decided to offer write a very basic one.
-b) The tool was basically done in the command line version, than I added the GUI on top. I might rewrite this somethimes in the future. Still I wanted to release, so the tool can be used.
+* If you review the code you will see a few things:
+* I'm not a GUI person and neither a person that likes to develop a GUI application. You will easily see this in the code; I still decided to offer write a very basic one.
+* The tool was basically done in the command line version, than I added the GUI on top. I might rewrite this in the future. Still I wanted to release, so the tool can be used.
 
 ## Author
 * Twitter: [@b00010111](https://twitter.com/b00010111)
