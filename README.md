@@ -22,6 +22,8 @@ The node "NO_PARENT_ITME_IN_ITEMS_TABEL" is a node added by pMetaDataParse. It i
 
 I further created an executable with auto-py-to-exe, this executable will open the GUI and you can select "content_cache" and "metadat_sqlite_db" via the menue. Click afterwards click reload.
 
+One thing on the GUI: I will not show all data extracted, it is more to visualize things, focus on some important and have a more easy access to the tool. If you want to see everything that gMetaDataParse extracts, use the --csv or --json output in the command line.
+
 ## Requirements
 * See requirements.txt. 
 * To install on linux run (tested on fresh Ubuntu 22 install): apt install -y python3-pip; apt install -y python3-tk; pip3 install -r requirements.txt 
