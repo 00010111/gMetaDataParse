@@ -25,7 +25,7 @@ I further created an executable with auto-py-to-exe, this executable will open t
 ## Requirements
 * See requirements.txt. 
 * To install on linux run (tested on fresh Ubuntu 22 install): apt install -y python3-pip; apt install -y python3-tk; pip3 install -r requirements.txt 
-*To install on windows: install pip3; open PowerShell and run pip3 install -r requirements.txt
+* To install on windows: install pip3; open PowerShell and run pip3 install -r requirements.txt OR you use the provided executable
 
 ## Examples
 ```
