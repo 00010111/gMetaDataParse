@@ -17,7 +17,7 @@ import tkinter as tk
 verbose = False
 tree = None
 Output = None
-version_string = "0.0500" 
+version_string = "0.0501" 
 entries = {}
 metadata_file = ''
 cache_dir = ''
@@ -93,7 +93,7 @@ def refresh():
         if len(v.get('found_cache_files',''))> 0:
             tree.insert('','end',text=v['items.local_title'], values=(v.get('items.file_size',''),v.get('items.modified_date',''),v.get('items.viewed_by_me_date',''),v.get('items.shared_with_me_date',''),v.get('cache_filename',''),'Yes',v.get('items.trashed',''),v.get('items.is_owner',''),v.get('items.is_folder',''),v.get('items.mime_type',''),v.get('item_properties.key.modified-date',''),v.get('item_properties.key.local-content-modified-date','')),iid=k,tags = ('cache_file',))
         elif v.get('items.trashed','0') != 0:
-            tree.insert('','end',text=v['items.local_title'], values=(v.get('items.file_size',''),v.get('items.modified_date',''),v.get('items.viewed_by_me_date',''),v.get('items.shared_with_me_date',''),v.get('cache_filename',''),'Yes',v.get('items.trashed',''),v.get('items.is_owner',''),v.get('items.is_folder',''),v.get('items.mime_type',''),v.get('item_properties.key.modified-date',''),v.get('item_properties.key.local-content-modified-date','')),iid=k,tags = ('trashed_file',))
+            tree.insert('','end',text=v['items.local_title'], values=(v.get('items.file_size',''),v.get('items.modified_date',''),v.get('items.viewed_by_me_date',''),v.get('items.shared_with_me_date',''),v.get('cache_filename',''),'No',v.get('items.trashed',''),v.get('items.is_owner',''),v.get('items.is_folder',''),v.get('items.mime_type',''),v.get('item_properties.key.modified-date',''),v.get('item_properties.key.local-content-modified-date','')),iid=k,tags = ('trashed_file',))
         else:
             tree.insert('','end',text=v['items.local_title'], values=(v.get('items.file_size',''),v.get('items.modified_date',''),v.get('items.viewed_by_me_date',''),v.get('items.shared_with_me_date',''),v.get('cache_filename',''),'No',v.get('items.trashed',''),v.get('items.is_owner',''),v.get('items.is_folder',''),v.get('items.mime_type',''),v.get('item_properties.key.modified-date',''),v.get('item_properties.key.local-content-modified-date','')),iid=k)
     ###USE stable_id as iid!!!
@@ -402,9 +402,9 @@ def lunchgui(entries,db_path):
         
         for k,v in entries.items():
             if len(v.get('found_cache_files',''))> 0:
-                tree.insert('','end',text=v['items.local_title'], values=(v.get('items.file_size',''),v.get('items.modified_date',''),v.get('items.viewed_by_me_date',''),v.get('items.shared_with_me_date',''),v.get('cache_filename',''),'Yes',v.get('items.trashed',''),v.get('items.is_owner',''),v.get('items.is_folder',''),v.get('items.mime_type',''),v.get('item_properties.key.modified-date',''),v.get('item_properties.key.local-content-modified-date','')),iid=k,tags = ('cache_file',))
+                tree.insert('','end',text=v['items.local_title'], values=(v.get('items.file_size',''),v.get('items.modified_date',''),v.get('items.viewed_by_me_date',''),v.get('items.shared_with_me_date',''),v.get('cache_filename',''),'Yes',v.get('items.trashed',''),v.get('items.is_owner',''),v.get('items.is_folder',''),v.get('items.mime_type',''),v.get('item_properties.key.modified-date',''),v.get('item_properties.key.local-content-modified-date','')),iid=k,tags = ('cache_file',)) 
             elif v.get('items.trashed','0') != 0:
-                tree.insert('','end',text=v['items.local_title'], values=(v.get('items.file_size',''),v.get('items.modified_date',''),v.get('items.viewed_by_me_date',''),v.get('items.shared_with_me_date',''),v.get('cache_filename',''),'Yes',v.get('items.trashed',''),v.get('items.is_owner',''),v.get('items.is_folder',''),v.get('items.mime_type',''),v.get('item_properties.key.modified-date',''),v.get('item_properties.key.local-content-modified-date','')),iid=k,tags = ('trashed_file',))
+                tree.insert('','end',text=v['items.local_title'], values=(v.get('items.file_size',''),v.get('items.modified_date',''),v.get('items.viewed_by_me_date',''),v.get('items.shared_with_me_date',''),v.get('cache_filename',''),'No',v.get('items.trashed',''),v.get('items.is_owner',''),v.get('items.is_folder',''),v.get('items.mime_type',''),v.get('item_properties.key.modified-date',''),v.get('item_properties.key.local-content-modified-date','')),iid=k,tags = ('trashed_file',))
             else:
                 tree.insert('','end',text=v['items.local_title'], values=(v.get('items.file_size',''),v.get('items.modified_date',''),v.get('items.viewed_by_me_date',''),v.get('items.shared_with_me_date',''),v.get('cache_filename',''),'No',v.get('items.trashed',''),v.get('items.is_owner',''),v.get('items.is_folder',''),v.get('items.mime_type',''),v.get('item_properties.key.modified-date',''),v.get('item_properties.key.local-content-modified-date','')),iid=k)
         ###USE stable_id as iid!!!

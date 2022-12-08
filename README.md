@@ -67,5 +67,8 @@ python3 ./gMetaDataParse.py
 
 
 ## Change History
+ * Version 0.0501:
+    * Bug fix
+	* GUI was showing wrong data in 'Found in cache dir' column for deleted items. Thanks to @chadtilbury for pointing out the issue.
  * Version 0.0500:
     * initial release
