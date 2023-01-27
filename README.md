@@ -50,8 +50,9 @@ python3 ./gMetaDataParse.py
 * The tool was basically done in the command line version, than I added the GUI on top. I might rewrite this in the future. Still I wanted to release, so the tool can be used.
 
 ## Author
-* Twitter: [@b00010111](https://twitter.com/b00010111)
+* Mastodon: [@b00010111](https://ioc.exchange/@b00010111)
 * Blog: https://00010111.at/
+* Twitter: [@b00010111](https://twitter.com/b00010111)
 
 ## License
 * Free to use, reuse and redistribute for everyone.
@@ -61,7 +62,8 @@ python3 ./gMetaDataParse.py
 ## Bugs, Discussions, Feature requests, contact
 * Still need to complete the description of each of the fields extracted and implement the function to print it.
 * open an issue
-* contact me via twitter
+* contact me via Mastodon: https://ioc.exchange/@b00010111
+* (reaching out via Twitter doesn't really work well anymore...sorry)
 
 ## further reading
 
