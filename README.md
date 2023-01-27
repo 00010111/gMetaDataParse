@@ -62,7 +62,7 @@ python3 ./gMetaDataParse.py
 ## Bugs, Discussions, Feature requests, contact
 * Still need to complete the description of each of the fields extracted and implement the function to print it.
 * open an issue
-* contact me via Mastodon: https://ioc.exchange/@b00010111
+* contact me via Mastodon
 * (reaching out via Twitter doesn't really work well anymore...sorry)
 
 ## further reading
