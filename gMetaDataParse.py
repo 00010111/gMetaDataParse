@@ -17,7 +17,7 @@ import tkinter as tk
 verbose = False
 tree = None
 Output = None
-version_string = "0.0501" 
+version_string = "0.0502" 
 entries = {}
 metadata_file = ''
 cache_dir = ''
@@ -173,9 +173,14 @@ def parseDB(db_path,s_path_local_cache):
     global verbose
     global entries
     if os.path.isfile(db_path) == False:
-        if verbose:
-            print("could not find file: " + db_path)
+        print("could not find file: " + str(db_path))
+        print("exiting")
         exit(1)
+    if s_path_local_cache != None:
+         if os.path.isdir(s_path_local_cache) == False:
+            print("could not find cache folder: " + str(s_path_local_cache))
+            print("exiting")
+            exit(1)
     entries = {}
     types = {}
     conn = sqlite3.connect(db_path)
@@ -473,6 +478,10 @@ elif args.gui and not db_path:
     print("If you use the -g,--gui option you need to provide the path to the metadata_sqlite_db file with the -f option. To start the GUI without choosing a file, run without any commandline option")
     exit(1)
 else:
+    if args.json == None and args.csv == None and args.verbose==False and args.gui==False:
+        print("Neither json,csv or verbose output have been choosen, defaulting to csv output into local directory.")
+        args.csv = datetime.now().strftime("%Y%m%d_%H%M%S") + "_output.csv"
+        
     res = parseDB(metadata_file,cache_dir)
     if args.output == None:
         args.output = '.'

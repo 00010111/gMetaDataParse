@@ -69,6 +69,10 @@ python3 ./gMetaDataParse.py
 
 
 ## Change History
+ * Version 0.0502:
+    * Fix issue 1
+	  * If neither json,csv,gui or verbose is choosen as output, gMetaDataParse will fall back to write csv output to local directory with a filename like: %Y%m%d_%H%M%S_output.csv
+	* improved error handling if database or cache dir are not found
  * Version 0.0501:
     * Bug fix
 	* GUI was showing wrong data in 'Found in cache dir' column for deleted items. Thanks to @chadtilbury for pointing out the issue.
