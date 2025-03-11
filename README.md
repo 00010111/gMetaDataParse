@@ -32,13 +32,13 @@ One thing on the GUI: I will not show all data extracted, it is more to visualiz
 ## Examples
 ```
 # parse metadat_sqlite_db and the content cache folder, creating a csv file and a json file in the current directory
-python3 ./gMetaDataParse.py -f ./gMetaDataParse.py -f .\metadata_sqlite_db -d .\content_cache\ -c res.csv -j res.json
+python3 ./gMetaDataParse.py -f .\metadata_sqlite_db -d .\content_cache\ -c res.csv -j res.json
 
 # parse metadat_sqlite_db and the content cache folder, creating a csv file and a json file in the current directory AND lunch the GUI
-python3 ./gMetaDataParse.py -f ./gMetaDataParse.py -f .\metadata_sqlite_db -d .\content_cache\ -c res.csv -j res.json -g
+python3 ./gMetaDataParse.py -f .\metadata_sqlite_db -d .\content_cache\ -c res.csv -j res.json -g
 
 # parse metadat_sqlite_db and the content cache folder, starting the GUI showing the results
-python3 ./gMetaDataParse.py -f ./gMetaDataParse.py -f .\metadata_sqlite_db -d .\content_cache\ -g
+python3 ./gMetaDataParse.py -f .\metadata_sqlite_db -d .\content_cache\ -g
 
 # starting the GUI, select metadata_sqlite_db and content_cache folder in the GUI
 python3 ./gMetaDataParse.py 
